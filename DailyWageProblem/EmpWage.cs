@@ -6,7 +6,7 @@ namespace DailyWageProblem
 {
     public class EmpWage
     {
-        public void Attendance()
+        public void Wage()
         {
             Random ran = new Random();
             int attend = ran.Next(0, 2);
