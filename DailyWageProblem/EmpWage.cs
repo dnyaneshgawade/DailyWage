@@ -17,6 +17,7 @@ namespace DailyWageProblem
 
         public void Wage()
         {
+            Console.WriteLine("using differnt classes");
             for (int i = 1; i <= WORKING_DAYS; i++)
             {
                 int working_day = i;
