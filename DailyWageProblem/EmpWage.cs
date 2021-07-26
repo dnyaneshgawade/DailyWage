@@ -10,29 +10,21 @@ namespace DailyWageProblem
         const int IS_FULL_TIME = 0;
         const int IS_PART_TIME = 1;
         const int WORKING_DAYS = 20;
-        int payment = 0;
-        int workHr;
+        public const int PART_TIME_HR = 4;
+        public const int FULL_TIME_HR = 8;
+        int fPayment;
+        int hPayment;
 
         public void Wage()
         {
-            Random random = new Random();
-            int num = random.Next(0, 3);
-            switch (num)
+            for (int i = 1; i <= WORKING_DAYS; i++)
             {
-                case IS_FULL_TIME:
-                    Console.WriteLine("daily wage of fulltime employee");
-                    workHr = 8;
-                    break;
-                case IS_PART_TIME:
-                    Console.WriteLine("daily wage of parttime employee");
-                    workHr = 4;
-                    break;
-                default:
-                    Console.WriteLine("employee is absent");
-                    break;
+                int working_day = i;
+                fPayment = WAGE_PER_HR * FULL_TIME_HR * working_day;
+                Console.WriteLine("full time Payment of day" + i + " is:" + fPayment);
+                hPayment = WAGE_PER_HR * PART_TIME_HR * working_day;
+                Console.WriteLine("part time Payment of day" + i + " is:" + hPayment);
             }
-            payment = WAGE_PER_HR * workHr * WORKING_DAYS;
-            Console.WriteLine("Payment is:" + payment);
         }
     }
 }
