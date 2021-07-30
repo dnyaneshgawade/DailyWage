@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DailyWageProblem
 {
-    public class EmpWage
+    public class EmpWageBuilder
     {
         const int IS_FULL_TIME = 0;
         const int IS_PART_TIME = 1;
@@ -12,10 +12,10 @@ namespace DailyWageProblem
         public static int workHr;
         public static int totalDays=0;
         public static int totalHrs=0;
-
+        
         public static int Wage(string company, int wagePerHr, int workingDays, int maxHr)
         {
-            while(workingDays <= 20 || maxHr <= 100)
+            while (totalDays <=workingDays && totalHrs <= maxHr)
             {
                 Random random = new Random();
                 int num = random.Next(0, 3);
