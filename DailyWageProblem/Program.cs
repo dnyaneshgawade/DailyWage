@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DailyWageProblem
 {
     class Program
     {
+        public static List<CompanyWage> CompanyList = new List<CompanyWage>();
         static void Main(string[] args)
         {
+
+            EmpWageBuilder emp = new EmpWageBuilder();
             Console.WriteLine("Wellcome to Daily Wage!");
-            EmpWageBuilder.Wage("facebook", 12, 10, 50);
-            EmpWageBuilder.Wage("google", 15, 15, 90);
-            EmpWageBuilder.Wage("microsoft", 30, 20, 110);
+            emp.AddEmp();
+            emp.Wage();
         }
     }
 }
