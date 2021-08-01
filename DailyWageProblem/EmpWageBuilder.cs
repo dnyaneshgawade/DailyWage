@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DailyWageProblem
 {
-    public class EmpWageBuilder
+    public class EmpWageBuilder:IEmpWageBuilder
     {
         const int IS_FULL_TIME = 0;
         const int IS_PART_TIME = 1;
